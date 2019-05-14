@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    int n,i,j;
+    scanf("%d",&n);
+    int a[n+1];
+    for(i=2;i<=n;i++)
+        a[i]=i;
+for(i=2;(i*i)<=n;i++)
+//we'll be checking until the square of n
+{
+if (a[i]!=0)
+//What we are doing here is we make the elements in the array zero if they are some elements which are the multiples
+{
+for(j=2;j<n;j++)
+{
+if (n<a[i]*j)
+break;
+else
+ // making elemnets 0 instead of deleting
+ // Making the multiples of i as 0.
+a[a[i]*j]=0;
+//seems like simple hashing
+}}}
+for(i=2; i<=n; i++)
+{//If the numbr in the array after performing the logic be non zero,
+if(a[i]!=0)
+printf("%d ",a[i]);
+}
+return 0;
+}
